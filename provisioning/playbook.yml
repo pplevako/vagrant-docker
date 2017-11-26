@@ -1,0 +1,34 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: Install mc
+      apt: name=mc state=present
+
+    - name: Install htop
+      apt: name=htop state=present
+
+    - name: Create ~/projects directory
+      file: path=~vagrant/projects state=directory
+      become: no
+
+    - include_role:
+        name: tmux_conf
+      vars:
+        tmux_conf_users:
+          - vagrant
+
+    - include_role: 
+        name: unison
+
+    - include_role:
+        name: geerlingguy.docker
+      vars:
+        docker_apt_release_channel: stable edge
+        docker_compose_version: 1.17.0
+
+    - include_role:
+        name: docker_group
+      vars:
+        docker_group_users:
+          - vagrant

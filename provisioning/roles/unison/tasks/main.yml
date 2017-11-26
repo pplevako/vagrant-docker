@@ -1,0 +1,12 @@
+---
+- name: Download unison
+  get_url:
+    url: https://github.com/TentativeConvert/Syndicator/raw/master/unison-binaries/unison-2.48.3
+    dest: /usr/local/bin/unison
+    mode: 755
+
+- name: Download unison-fsmonitor
+  get_url:
+    url: https://github.com/TentativeConvert/Syndicator/raw/master/unison-binaries/unison-fsmonitor
+    dest: /usr/local/bin/unison-fsmonitor
+    mode: 755

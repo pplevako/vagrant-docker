@@ -1,0 +1,4 @@
+.vagrant
+playbook.retry
+
+provisioning/roles/geerlingguy.docker
