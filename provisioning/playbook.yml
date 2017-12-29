@@ -8,6 +8,9 @@
     - name: Install htop
       apt: name=htop state=present
 
+    - name: Install ncdu
+      apt: name=ncdu state=present
+
     - name: Create ~/projects directory
       file: path=~vagrant/projects state=directory
       become: no
