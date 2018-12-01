@@ -2,3 +2,4 @@
 playbook.retry
 
 provisioning/roles/geerlingguy.docker
+provisioning/roles/gantsign.inotify

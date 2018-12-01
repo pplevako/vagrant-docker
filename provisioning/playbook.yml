@@ -35,3 +35,8 @@
       vars:
         docker_group_users:
           - vagrant
+
+    - include_role:
+        name: gantsign.inotify
+      vars:
+        inotify_max_user_watches: 524288
