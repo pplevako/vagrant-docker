@@ -28,7 +28,7 @@
         name: geerlingguy.docker
       vars:
         docker_apt_release_channel: stable edge
-        docker_compose_version: 1.22.0
+        docker_compose_version: 1.23.2
 
     - include_role:
         name: docker_group
